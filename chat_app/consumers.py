@@ -1,8 +1,10 @@
 import json
 from channels.generic.websocket import AsyncWebsocketConsumer
 from django.conf import settings  
+from channels.layers import get_channel_layer
 class ChatConsumer(AsyncWebsocketConsumer):
     async def connect(self):
+        self.channel_layer = get_channel_layer() 
         self.room_name = self.scope["url_route"]["kwargs"]["room_name"]
         self.room_group_name = f"chat_{self.room_name}"
 
