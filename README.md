@@ -67,14 +67,3 @@ A Django-based backend service deployed on Render, integrating **Google OAuth, G
 3. **Real-Time Chat (WebSocket):**
     ```bash
     /ws/chat/<room_name>/	WebSocket	Connects users to a real-time chat room
-
-
-
-
-
-
-
-
-
-
-
