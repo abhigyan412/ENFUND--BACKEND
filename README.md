@@ -67,3 +67,77 @@ A Django-based backend service deployed on Render, integrating **Google OAuth, G
 3. **Real-Time Chat (WebSocket):**
     ```bash
     /ws/chat/<room_name>/	WebSocket	Connects users to a real-time chat room
+## 🛠️ Testing the API
+You can test the API using **Postman** or **cURL**.
+
+### **1️⃣ Google OAuth Authentication**
+#### **Login via Google OAuth**
+- **Request:**
+  ```bash
+  GET https://enfund-backend.onrender.com/auth/login/
+ - **Reponse:**
+     ```bash
+     
+   "message": "Redirecting to Google OAuth"
+     
+    
+**OAuth Callback**
+  - **Request:**
+     ```bash
+     GET https://enfund-backend.onrender.com/auth/login/
+  - **Reponse:**
+      ```bash     
+       "email": "user@example.com",
+       "name": "John Doe",
+       "picture": "profile_image_url",
+       "access_token": "ya29.a0AeX..."
+        
+
+
+### **2️⃣Google Drive Integration**
+#### **Download a File**
+- **Request:**
+  ```bash
+  GET https://enfund-backend.onrender.com/drive/download/<file_id>/
+  Headers:
+  Authorization: Bearer <your_access_token>
+
+ - **Reponse:**
+    ```bash
+       "message": "File downloaded successfully"
+       
+
+    
+**Upload a File**
+  - **Request:**
+     ```bash
+       POST https://enfund-backend.onrender.com/drive/upload/
+       Headers:
+       Authorization: Bearer <your_access_token>
+       Body (Multipart/Form-Data):
+       file: <your_file>
+
+  - **Reponse:**
+    ```bash
+    
+     "message": "File uploaded successfully",
+     "file_id": "1B2M2Y8AsgTpgAmY7Ph..."
+    
+
+### **3️⃣ WebSockets for Real-Time Chat**
+#### **Connect using a WebSocket client like Postman or a browser-based WS tester:**
+             ws://enfund-backend.onrender.com/ws/chat/<room_name>/
+**Send a JSON message:**
+          ```bash
+           "message": "Hello, World!",
+           "username": "John"
+   
+
+
+- **Reponse:**
+    ```bash
+     
+      "message": "Hello, World!",
+      "username": "John"
+        
+
