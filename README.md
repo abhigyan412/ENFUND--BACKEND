@@ -36,7 +36,7 @@ A Django-based backend service deployed on Render, integrating **Google OAuth, G
 git clone https://github.com/abhigyan412/ENFUND--BACKEND.git
 cd ENFUND--BACKEND
 
-### **2️⃣ Create a Virtual Environment**
+## **2️⃣ Create a Virtual Environment**
 ```bash
 python -m venv env
 source env/bin/activate  # On Windows: env\Scripts\activate
