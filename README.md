@@ -126,7 +126,9 @@ You can test the API using **Postman** or **cURL**.
 
 ### **3️⃣ WebSockets for Real-Time Chat**
 #### **Connect using a WebSocket client like Postman or a browser-based WS tester:**
-             ws://enfund-backend.onrender.com/ws/chat/<room_name>/
+             ws://enfund-backend.onrender.com/ws/chat/<room_name
+**To use on web browser directly :**
+             https://enfund-backend.onrender.com/chat/       
 **Send a JSON message:**
           ```bash
            "message": "Hello, World!",
