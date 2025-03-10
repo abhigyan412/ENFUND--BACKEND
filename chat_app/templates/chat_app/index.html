@@ -16,7 +16,7 @@
 
     <script>
         const roomName = "general";  // Static chat room
-        const socket = new WebSocket(`ws://${window.location.host}/ws/chat/${roomName}/`);
+        const socket = new WebSocket("wss://enfund-backend.onrender.com/ws/chat/general/");
 
         socket.onmessage = function(event) {
             const data = JSON.parse(event.data);
@@ -24,6 +24,10 @@
             messageElement.textContent = `${data.email}: ${data.message}`;
             document.getElementById("messages").appendChild(messageElement);
         };
+        socket.onerror = function(event) {
+    console.error("WebSocket error:", event);
+      };
+
 
         function sendMessage() {
             const email = document.getElementById("email").value.trim().toLowerCase();  
