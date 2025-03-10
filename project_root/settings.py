@@ -159,3 +159,6 @@ CHANNEL_LAYERS = {
 }
 
 ALLOWED_CHAT_USERS = ["user1@example.com", "user2@example.com"]
+
+CSRF_TRUSTED_ORIGINS = ["https://enfund-backend.onrender.com"]
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
