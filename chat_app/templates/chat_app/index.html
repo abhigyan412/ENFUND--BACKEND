@@ -16,9 +16,11 @@
 
     <script>
         const roomName = "general";  // Static chat room
-        const socket = new WebSocket("wss://enfund-backend.onrender.com/ws/chat/general/");
+        const socket = new WebSocket("wss://enfund-backend.onrender.com/ws/chat/" + roomName + "/");
 
         socket.onmessage = function(event) {
+            console.log("📩 Message received:", event.data);
+
             const data = JSON.parse(event.data);
             const messageElement = document.createElement("li");
             messageElement.textContent = `${data.email}: ${data.message}`;
