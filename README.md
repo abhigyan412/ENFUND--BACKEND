@@ -140,6 +140,6 @@ You can test the API using **Postman** or **cURL**.
     ```bash
      
       "message": "Hello, World!",
-      "username": "John"
+      "username": "user1@example.com , user12@example.com"
         
 
