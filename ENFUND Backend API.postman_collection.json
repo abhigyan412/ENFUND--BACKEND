@@ -1,0 +1,108 @@
+{
+	"info": {
+		"_postman_id": "18ec3015-c2a1-4f44-987c-b67ce3f2ae7e",
+		"name": "ENFUND Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37012888"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://enfund-backend.onrender.com/drive/download/<file_id>/\n",
+					"protocol": "https",
+					"host": [
+						"enfund-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"drive",
+						"download",
+						"<file_id>",
+						"\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://enfund-backend.onrender.com/drive/upload/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://enfund-backend.onrender.com/drive/upload/",
+					"protocol": "https",
+					"host": [
+						"enfund-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"drive",
+						"upload",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Google o auth authentication",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://enfund-backend.onrender.com/auth/login/\n",
+					"protocol": "https",
+					"host": [
+						"enfund-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"login",
+						"\n"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://enfund-backend.onrender.com/auth/callback/\n",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://enfund-backend.onrender.com/auth/callback/\n",
+					"protocol": "https",
+					"host": [
+						"enfund-backend",
+						"onrender",
+						"com"
+					],
+					"path": [
+						"auth",
+						"callback",
+						"\n"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
