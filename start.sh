@@ -8,5 +8,8 @@ python manage.py collectstatic --noinput
 
 echo "Render assigned PORT: $PORT"
 
+echo "Checking open ports before starting Daphne..."
+netstat -tulnp
+
 echo "Starting ASGI server with Daphne..."
 daphne -b 0.0.0.0 -p $PORT project_root.asgi:application 
