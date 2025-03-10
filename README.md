@@ -123,7 +123,8 @@ You can test the API using **Postman** or **cURL**.
      "message": "File uploaded successfully",
      "file_id": "1B2M2Y8AsgTpgAmY7Ph..."
     
-
+### **Postman Collection:**
+[Download Here](https://github.com/abhigyan412/ENFUND--BACKEND/blob/main/ENFUND%20Backend%20API.postman_collection.json)
 ### **3️⃣ WebSockets for Real-Time Chat**
 #### **Connect using a WebSocket client like Postman or a browser-based WS tester:**
              ws://enfund-backend.onrender.com/ws/chat/<room_name
